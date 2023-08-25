@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PaddingContainer from "./PaddingContainer";
+import siteConfig from "@/config/siteConfig";
 
 const Navigation = () => {
   return (
@@ -7,7 +8,7 @@ const Navigation = () => {
       <PaddingContainer>
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="font-semibold text-lg">
-            I love You Nono ❤❤❤
+            {siteConfig.siteName}
           </Link>
           <nav>
             <ul className="flex items-center justify-center gap-3 text-neutral-700">
