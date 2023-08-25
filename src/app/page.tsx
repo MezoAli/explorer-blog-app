@@ -8,7 +8,9 @@ export default function Home() {
     <PaddingContainer>
       <main className="h-auto space-y-10">
         <PostCard post={DUMMY_POSTS[0]} />
-        <PostList posts={[DUMMY_POSTS[1], DUMMY_POSTS[5]]} />
+        <PostList posts={[DUMMY_POSTS[1], DUMMY_POSTS[2]]} />
+        <PostCard post={DUMMY_POSTS[3]} reverse />
+        <PostList posts={[DUMMY_POSTS[4], DUMMY_POSTS[5]]} />
       </main>
     </PaddingContainer>
   );
