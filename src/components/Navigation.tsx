@@ -7,7 +7,7 @@ const Navigation = () => {
       <PaddingContainer>
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="font-semibold text-lg">
-            Explorer
+            I love You Nono ❤❤❤
           </Link>
           <nav>
             <ul className="flex items-center justify-center gap-3 text-neutral-700">
