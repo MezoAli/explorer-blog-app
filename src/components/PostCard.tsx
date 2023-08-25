@@ -24,7 +24,7 @@ const PostCard = ({ post, reverse, layout = "horizontal" }: PostCardProps) => {
         width={600}
         height={300}
         className={`rounded-md object-cover object-center max-h-[300px] ${
-          reverse ? "order-last" : ""
+          reverse ? "md:order-last" : ""
         }`}
       />
       <PostContent post={post} />
