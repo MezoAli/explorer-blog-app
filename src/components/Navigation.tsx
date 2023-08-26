@@ -4,7 +4,7 @@ import siteConfig from "@/config/siteConfig";
 
 const Navigation = () => {
   return (
-    <div className="border-b mb-3 sticky top-0 left-0 right-0 bg-white bg-opacity-50 backdrop-blur-sm shadow-sm">
+    <div className="border-b z-40 mb-3 sticky top-0 left-0 right-0 bg-white bg-opacity-50 backdrop-blur-sm shadow-sm">
       <PaddingContainer>
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="font-semibold text-lg">
