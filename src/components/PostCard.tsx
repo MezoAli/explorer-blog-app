@@ -23,11 +23,11 @@ const PostCard = ({ post, reverse, layout = "horizontal" }: PostCardProps) => {
         alt={post.title}
         width={600}
         height={300}
-        className={`rounded-md object-cover object-center max-h-[300px] ${
+        className={`rounded-md object-cover object-center h-full max-h-[300px] ${
           reverse ? "md:order-last" : ""
         }`}
       />
-      <PostContent post={post} />
+      <PostContent post={post} isPostPage={false} />
     </Link>
   );
 };

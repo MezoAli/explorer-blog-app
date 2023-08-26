@@ -18,6 +18,7 @@ const CategoryPage = ({
   });
   return (
     <PaddingContainer>
+      <h2 className="text-center mb-6 text-4xl font-bold">{category}</h2>
       <PostList posts={posts} />
     </PaddingContainer>
   );

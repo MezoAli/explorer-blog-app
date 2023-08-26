@@ -4,11 +4,14 @@ import { ArrowRight } from "lucide-react";
 
 interface PostContentProps {
   post: Post;
+  isPostPage?: boolean;
 }
-const PostContent = ({ post }: PostContentProps) => {
+const PostContent = ({ post, isPostPage }: PostContentProps) => {
   return (
     <div className="flex flex-col justify-start items-start gap-3">
-      <div className="flex justify-center items-center text-sm text-neutral-400 gap-3">
+      <div
+        className={`flex justify-center items-center text-xs md:text-sm text-neutral-400 gap-3`}
+      >
         <div
           className={`font-medium ${
             post.category.title === "Cities"
@@ -25,12 +28,20 @@ const PostContent = ({ post }: PostContentProps) => {
         <div className="h-2 w-2 rounded-full bg-neutral-400" />
         <div>{getRelativeTime(post.date_created)}</div>
       </div>
-      <h2 className="text-2xl font-medium">{post.title}</h2>
+      <h2
+        className={` ${
+          isPostPage ? "text-4xl font-bold" : "text-2xl font-medium"
+        }`}
+      >
+        {post.title}
+      </h2>
       <div className="text-neutral-500 leading-snug">{post.description}</div>
-      <div className="flex gap-2 justify-center items-center pt-2">
-        Read More
-        <ArrowRight size="16" />
-      </div>
+      {!isPostPage && (
+        <div className="flex gap-2 justify-center items-center pt-2">
+          Read More
+          <ArrowRight size="16" />
+        </div>
+      )}
     </div>
   );
 };
